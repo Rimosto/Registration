@@ -7,7 +7,7 @@
   <style>
    body {
             font-family: 'Lato', sans-serif;
-            background-color: #D1CFDD;
+            background-color: #f9f8ff;
             margin: 0;
             padding: 0;
         }
@@ -30,9 +30,11 @@
         }
         .container {
             display: flex;
-            padding: 40px;
-            /* justify-content: center;
-            align-items: center;
+            padding: 50px;
+            width: 95%;
+            /* text-align: center; */
+            justify-content: center;
+            /* align-items: center;
             height: calc(100vh - 70px); */
         }
         .sidedar {
@@ -97,9 +99,8 @@
             border-radius: 5px;
             background-color: #f0f8e8;
         }
-        .profile-picture {
-            text-align: center;
-            margin-bottom: 20px;
+        #profile-pic-upload {   
+            display: none;
         }
         .profile-picture img {
             width: 100px;
@@ -107,12 +108,14 @@
             border-radius: 50%;
             border: 5px solid #2c2c2c;
         }
-        .profile-picture a {
+        .profile-picture {
             display: block;
             margin-top: 10px;
             color: #2c2c2c;
             text-decoration: none;
             font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
         }
         .buttons {
             display: flex;
@@ -146,7 +149,7 @@
  <body>
     <form action="table5.html">
   <div class="header">
-   <img alt="Parkroad Fellowship Logo" height="50" src="logo.png" width="150"/>
+   <img alt="Parkroad Fellowship Logo" height="50" src="Assets/logo.png" width="150"/>
    <nav>
     <a href="#">ABOUT</a>
     <a href="#">  MISSIONS </a>
@@ -173,7 +176,7 @@
             </svg>
             
       </i>
-        <img src="Rectangle 5.png" alt="">
+        <img src="Assets/Rectangle 5.png" alt="">
       <i>
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="24" cy="24" r="21.5" fill="white" stroke="#171154" stroke-width="5"/>
@@ -181,7 +184,7 @@
             </svg>
             
       </i>
-        <img src="Rectangle 5.png" alt="">
+        <img src="Assets/Rectangle 5.png" alt="">
       <i >
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="24" cy="24" r="21.5" fill="white" stroke="#171154" stroke-width="5"/>
@@ -189,7 +192,7 @@
             </svg>
             
       </i>
-        <img src="Rectangle 5.png" alt="">
+        <img src="Assets/Rectangle 5.png" alt="">
       <i >
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="24" cy="24" r="21.5" fill="white" stroke="#171154" stroke-width="5"/>
@@ -197,7 +200,7 @@
             </svg>
             
       </i>
-        <img src="Rectangle 5.png" alt="">
+        <img src="Assets/Rectangle 5.png" alt="">
       <i>
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="24" cy="24" r="21.5" fill="white" stroke="#171154" stroke-width="5"/>
@@ -234,12 +237,18 @@
             <a href="#">SKIP >
             </a>
            </div>
-           <div class="profile-picture">
+           <!-- <div class="profile-picture">
             <img alt="Profile Picture Placeholder" height="100" src="user.png" width="100"/>
-            <a href="#">
-             Add Profile Picture
+            <a href="#"> Add Profile Picture
+                <Input type="file"></Input>
             </a>
-           </div>
+           </div> -->
+           <div class="profile-picture">
+            <img alt="Profile Picture Placeholder" height="100" src="Assets/user.png" width="100"/>
+            <label for="profile-pic-upload" > Add Profile Picture </label>
+            <input type="file" id="profile-pic-upload" >
+        </div>
+        
        <div class="buttons">
         <button class="back" type="button">
          BACK
