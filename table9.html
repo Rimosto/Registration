@@ -4,86 +4,148 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            color: #000;
-        }
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-            background-color: #fff;
-            border-bottom: 1px solid #ddd;
-        }
-        .header .menu-icon {
-            font-size: 24px;
-            cursor: pointer;
-        }
-        .header .title {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .progress-bar {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
-            padding: 0 20px;
-        }
-        .progress-bar div {
-            height: 5px;
-            width: 20%;
-            background-color: #8cc63f;
-        }
-        .progress-bar div:last-child {
-            background-color: #1d1d5e;
-        }
-        .content {
-            padding: 0 20px;
-        }
-        .content p {
-            margin: 10px 0;
-        }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
-        }
-        .button-container button {
-            background-color: #d3d3e2;
-            border: 1px solid #d3d3e2;
-            border-radius: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
+        font-family: 'Lato', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #FFFFFF;
+    }
+    .container {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+    .header h1 {
+        font-size: 18px;
+        color: #000;
+        margin: 0;
+    }
+    .header .menu-icon {
+        font-size: 24px;
+        color: #000;
+        cursor: pointer;
+        color: #171154;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        background-color: #FFFFFF;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .nav-menu a {
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #171154;
+        border-bottom: 1px solid #ccc;
+    }
+    .nav-menu a:last-child {
+        border-bottom: none;
+    }
+    .nav-menu a:hover {
+        background-color: #E9F7CC;        }
+    .progress-bar {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+    .progress-bar div {
+        width: 18%;
+        height: 4px;
+        background-color: #ccc;
+    }
+    .progress-bar .active {
+            background-color: #070331;    
+            }
+            .progress-bar .completed {
+            background-color: #a4f109;    
+            }
+    .form-section {
+        background-color: #FFFFFF;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-section h2 {
+        font-size: 16px;
+        color: #171154;
+        margin-bottom: 20px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+        height: 50%;
+    }
+    
+    .btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        color: #171154;
+        border: 1px solid #FFFFFF;
+        border: none;
+        border-radius: 4px;
+        text-align: center;
+        cursor: pointer;
+    }
     </style>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'flex';
+            } else {
+                menu.style.display = 'none';
+            }
+        }
+    </script>
 </head>
 <body>
     <form action="">
+        <div class="container">
     <div class="header">
         <div class="menu-icon">
             <i class="fas fa-bars"></i>
         </div>
         <div class="title">Registration</div>
     </div>
+    <nav id="nav-menu" class="nav-menu">
+    <a href="#">ABOUT</a>
+    <a href="#">MISSIONS</a>
+    <a href="#">GIVE</a>
+    <a href="#">BLOG</a>
+    <a href="#">CONTACT</a>
+    <a href="#">ACCOUNT</a>
+</nav>
     <div class="progress-bar">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div class="completed"></div>
+        <div class="completed"></div>
+        <div class="completed"></div>
+        <div class="completed"></div>
+        <div class="active"></div>
     </div>
-    <div class="content">
+    <div class="form-section">
         <p><strong>Step 5: Awaiting confirmation</strong></p>
+        <div class="form-group">
         <p>Kindly be patient as we verify your details.</p>
         <p>A link will be sent to your email after approval. Use it to access your user account</p>
     </div>
-    <div class="button-container">
+    
+    <div class="btn">
         <button>VISIT SITE</button>
     </div>
+</div>
+</div>
 </form>
 </body>
 </html>
