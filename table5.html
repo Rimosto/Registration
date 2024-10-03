@@ -1,0 +1,206 @@
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #D1CFDD;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+        .header h1 {
+            font-size: 24px;
+            color: #000;
+            margin: 0;
+        }
+        .header .menu-icon {
+            font-size: 24px;
+            color: #000;
+            cursor: pointer;
+            color: #FFFFFF;
+        }
+        .nav-menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            background-color: #FFFFFF;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .nav-menu a {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #171154;
+            border-bottom: 1px solid #ccc;
+        }
+        .nav-menu a:last-child {
+            border-bottom: none;
+        }
+        .nav-menu a:hover {
+            background-color: #E9F7CC;        }
+        .progress-bar {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .progress-bar div {
+            width: 18%;
+            height: 4px;
+            background-color: #ccc;
+        }
+        .progress-bar .active {
+            background-color: #171154;        }
+        .form-section {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-section h2 {
+            font-size: 16px;
+            color: #171154;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            color: #171154;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #171154;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-group select {
+            appearance: none;
+            background-size: 12px;
+        }
+        .form-group select option {
+            padding: 10px;
+        }
+        .form-group .select-wrapper {
+            position: relative;
+        }
+        .form-group .select-wrapper::after {
+            content: '\f078';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: #FFFFFF;
+            border: 1px solid #171154;
+            border: none;
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'flex';
+            } else {
+                menu.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="table6.html">
+    <div class="container">
+        <div class="header">
+            <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+            <h1>Registration</h1>
+        </div>
+        <nav id="nav-menu" class="nav-menu">
+            <a href="#">ABOUT</a>
+            <a href="#">MISSIONS</a>
+            <a href="#">GIVE</a>
+            <a href="#">BLOG</a>
+            <a href="#">CONTACT</a>
+            <a href="#">ACCOUNT</a>
+        </nav>
+        <div class="progress-bar">
+            <div class="active"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="form-section">
+            <h2>Step 1: Personal Information</h2>
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name">
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name">
+            </div>
+            <div class="form-group">
+                <label for="postal-address">Postal Address</label>
+                <input type="text" id="postal-address" name="postal-address">
+            </div>
+            <div class="form-group">
+                <label for="email-address">Email Address</label>
+                <input type="email" id="email-address" name="email-address">
+            </div>
+            <div class="form-group">
+                <label for="mobile-phone">Mobile Phone Number</label>
+                <input type="tel" id="mobile-phone" name="mobile-phone">
+            </div>
+            <div class="form-group">
+                <label for="residential-address">Residential Address (Area Name, Road Name, Estate Name and House Number):</label>
+                <input type="text" id="residential-address" name="residential-address">
+            </div>
+            <div class="form-group">
+                <label for="marital-status">Marital Status</label>
+                <div class="select-wrapper">
+                    <select id="marital-status" name="marital-status">
+                        <option value="">Select</option>
+                        <option value="single">Single</option>
+                        <option value="married">Married</option>
+                        <option value="divorced">Divorced</option>
+                        <option value="widowed">Widowed</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn">NEXT</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>
