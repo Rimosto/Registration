@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvation and Church Details</title>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        .header nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #171154;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #171154;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #E9F7CC;
+        }
+
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .form-buttons .back-button {
+            background-color: #D1CFDD;
+            color: #171154;
+        }
+
+        .form-buttons .next-button {
+            background-color: #171154;
+            color: #FFFFFF;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .form-container {
+                padding: 15px;
+            }
+
+            .form-buttons {
+                flex-direction: column;
+            }
+
+            .form-buttons button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .form-buttons .back-button {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header nav {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="Assets/logo.png" alt="Parkroad Fellowship Logo">
+        <nav>
+            <a href="#">ABOUT</a>
+            <a href="#">MISSIONS</a>
+            <a href="#">GIVE</a>
+            <a href="#">BLOG</a>
+            <a href="#">CONTACT</a>
+            <a href="#">ACCOUNT</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="form-container">
+            <div class="progress-bar">
+                <!-- Progress bar icons -->
+                <i><svg width="48" height="48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="21.5" fill="white" stroke="#171154" stroke-width="5"/><path d="M20.1515 31.6858L12.3515 24.7126C11.8828 24.2936 11.8828 23.6144 12.3515 23.1954L14.0485 21.6782C14.5171 21.2592 15.2769 21.2592 15.7455 21.6782L21 26.3756L32.2545 16.3142C32.7231 15.8953 33.4829 15.8953 33.9515 16.3142L35.6485 17.8314C36.1172 18.2503 36.1172 18.9296 35.6485 19.3486L21.8485 31.6858C21.3799 32.1047 20.6201 32.1047 20.1515 31.6858Z" fill="#100F35"/></svg></i>
+                <img src="Assets/Rectangle 5.png" alt="">
+                <i><svg width="48" height="48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="21.5" fill="white" stroke="#171154" stroke-width="5"/><circle cx="24" cy="24" r="10" fill="#100F35"/></svg></i>
+            </div>
+
+            <!-- Form fields -->
+            <div class="form-group">
+                <label for="Date-of-Salvation">Date of Salvation</label>
+                <input id="Date-of-Salvation" type="date" placeholder="dd/mm/yyyy or just year" required>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Where do you go to church?</label>
+                <input id="location" type="text" placeholder="Your Answer" required>
+            </div>
+
+            <div class="form-group">
+                <label>Do you serve in your church?</label>
+                <label><input type="radio" name="agreement" value="yes" required> Yes</label>
+                <label><input type="radio" name="agreement" value="no" required> No</label>
+            </div>
+
+            <div class="form-group">
+                <label for="Name-of-pastor">Name of Pastor</label>
+                <input id="Name-of-pastor" type="text" placeholder="Name of pastor" required>
+            </div>
+
+            <div class="form-group">
+                <label for="department">Which department do you serve in at your church and what do you do there?</label>
+                <input id="department" type="text" placeholder="Your Answer" required>
+            </div>
+
+            <!-- Form navigation buttons -->
+            <div class="form-buttons">
+                <button class="back-button" type="button">BACK</button>
+                <button class="next-button" type="submit">NEXT</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
