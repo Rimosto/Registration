@@ -1,0 +1,147 @@
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #FFFFFF;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        .header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #171154;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            padding: 40px;
+        }
+
+        .sidebar {
+            width: 25%;
+            padding-right: 20px;
+
+        }
+
+        .sidebar h2 {
+            color: #171154;
+        }
+
+        .form-container {
+            width: 75%;
+            background-color: #FFFFFF;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .progress-bar div {
+            display: flex;
+            align-items: center;
+        }
+
+        .progress-bar div i {
+            font-size: 24px;
+            color: #171154;
+        }
+
+        .progress-bar div img {
+            width: 50px;
+            height: 2px;
+            background-color: #171154;
+            margin: 0 10px;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            width: 20%;
+            font-weight: bold;
+            color: #171154;
+        }
+
+        .form-group input {
+            width: 40%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #E9F7CC;
+            margin: 20px;
+        }
+
+        .form-group.full-width {
+            flex-direction: column;
+        }
+
+        .form-group.full-width label {
+            width: 100%;
+        }
+
+        .form-group.full-width input {
+            width: 100%;
+        }
+
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .form-buttons .back-button {
+            background-color: #D1CFDD;
+            color: #171154;
+        }
+
+        .form-buttons .next-button {
+            background-color: #171154;
+            color: #FFFFFF;
+        }
+
+        .form-buttons .submit-button {
+            background-color: #171154;
+            color: #FFFFFF;
+        }
+
+        .form-buttons .submit-button:hover {
+            background-color: #171154;
+            color: #FFFFFF;
+        }
+
+        #radio {
+            width: 10px;
+            height: 10px;
+            padding: 10px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
